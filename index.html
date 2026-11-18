@@ -100,7 +100,7 @@ img,svg{max-width:100%}
 img.cover{object-position:50% 30%;filter:grayscale(1) contrast(1.05)}
 .read img.cover{width:min(100%,30rem);aspect-ratio:auto;height:auto;display:block;margin:1rem auto 2rem}
 .portrait{margin:0;width:min(100%,22rem);justify-self:center}
-.portrait img{display:block;width:100%;height:auto;border-radius:.35rem;outline:3px solid var(--sun);outline-offset:6px}
+.portrait img{display:block;width:100%;height:auto;border:6px solid var(--sun);border-radius:.35rem;background:var(--sun)}
 .portrait figcaption{color:var(--hero-muted);font-size:.85rem;margin-top:1rem}
 .tw{position:fixed;right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom,0px));z-index:40;display:flex;flex-direction:column;align-items:flex-end;gap:.6rem}
 .tfab{all:unset;cursor:pointer;width:3.2rem;height:3.2rem;border-radius:50%;background:var(--fab-bg);color:var(--fab-ink);display:grid;place-items:center;box-shadow:0 0 0 2px var(--fab-ring),0 6px 18px rgba(0,0,0,.35)}
@@ -129,8 +129,9 @@ img.cover.color{filter:none}
 .src li{margin:.5rem 0}
 .src a{color:var(--link);overflow-wrap:anywhere}
 .cap a{color:var(--link);overflow-wrap:anywhere}
-.portrait{margin:.9rem;width:min(calc(100% - 1.8rem),22rem)}
-@media (max-width:760px){.portrait{width:min(calc(100% - 3rem),19rem);margin:.9rem auto 0}}
+.portrait{margin:.9rem;width:22rem;max-width:calc(100% - 1.8rem);min-width:0}
+.portrait img{min-height:1px}
+@media (max-width:760px){.portrait{width:19rem;max-width:calc(100% - 3rem);margin:.9rem auto 0}}
 </style>
 </head>
 <body>
